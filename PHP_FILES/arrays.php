@@ -90,7 +90,7 @@ $contacts= array(
     )
 );
 
-echo "Contact for Aaron is".$contacts[2]['pnumber'];
+echo "Email for John is".$contacts[0]['email'];
 echo "<hr>";
 
 #Indexed array
