@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CURATIVE HOSPITAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2 style="color:black; text-align:center; font-family:Courier New"> ADMISSION DETAILS</h2>
+<form action="Curative_Hospital_2.php" method="post">
+<div>
+    <label>Admission Doctor's Name</label> <br>
+    <input class="inputstyle" type="text" name="Dname">
+</div>
+
+<div>
+    <label>Admission Number</label> <br>
+    <input class="inputstyle" type="text" name="Admnumber">
+</div>
+
+<div>
+    <label>Date Of Admission</label> <br>
+    <input class="inputstyle" type="date" name="DOA">
+</div>
+
+<div>
+    <label>Ward Unit and Number</label> <br>
+    <input class="inputstyle" type="text" name="WUN">
+</div>
+
+<div>
+    <label>Patient's Hospital profile</label> <br>
+    <input class="inputstyle" type="url" name="accountlink" placeholder= www.patientcurative.ac.ke/alicewonderland">
+</div>
+
+<div>
+    <label>Admission Details</label>
+    <select class="inputstyle"  name="admissiondetails">
+        <option value="referral">Referral</option>
+        <option value="emergency">Emergency</option>
+        <option value="accidents">Accidents</option>
+        <option value="Testrunning">Test running</option>
+        <option value="observation">Observation</option>
+        <option value="doctorsrecommendations">Doctor's recommendations</option>
+    </select>
+</div>
+
+<div>
+    <label>Upload medical history or files</label> <br>
+    <input class="otherinputs" type="file" name="file">
+</div>
+
+<div>
+    <label>Admission Doctor's Comments</label> <br>
+    <textarea class="otherinputs" name="aoi" cols="140" rows="15" placeholder="Doctor's comments...."></textarea>
+</div>
+
+<div class="buttonthe">
+    <button>
+       <a href="Curative_Hospital_1.html">BACK</a>
+    </button>
+
+    <button type="submit" name="submit2">SUBMIT</button>
+</div>
+
+</form>
+
+
+
+</body>
+</html>
