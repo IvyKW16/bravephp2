@@ -1,16 +1,23 @@
 <?php
 
+include "connect.php";
+
 #REQUEST CAN BE USED TO FETCH INFORMATION USED THE GET OR POST METHOD
 if (isset($_POST["submit"])){
-    $first_name=$_POST["fname"];
-    $second_name=$_POST["lname"];
+    $firstName=$_POST["firstName"];
+    $secondName=$_POST["secondName"];
+}
 
-    echo "The first name picked is $first_name <br>";
-    echo "The second name picked is $second_name <br>";
-}
-else {
-    echo "Kindly fill this form";
-}
+    $sql = "INSERT INTO `detail`( `firstName`, `secondName`) VALUES ('[$firstName]','[$secondName]')";
+    $result = mysqli_query($link, $sql);
+
+    if ($result){
+        echo "YOUR RECORD HAS BEEN ADDED SUCCESSFULLY";
+    }
+    else {
+        echo "ERROR ADDING A RECORD".mysqli_error($link);
+    }
+
 
 ?>
 
@@ -26,12 +33,12 @@ else {
 <form action="postmethod.php" method="post">
     <div>
         <label>First Name</label>
-        <input type="text" name="fname">
+        <input type="text" name="firstName">
     </div>
 
     <div>
-        <label>Last Name</label>
-        <input type="text" name="lname">
+        <label>Second Name</label>
+        <input type="text" name="secondName">
     </div>
 
     <input type="submit" name="submit" value="submit">
