@@ -15,11 +15,13 @@ if ($results){
     if ($data>0){
         echo "<h3>Table Details</h3>";
 
-        $row = mysqli_fetch_array($results);
-        while ($row){
-            $id = $row ['id'];
-            $firstName = $row ['firstName'];
-            $secondName = $row ['secondName'];
+        while ($row=mysqli_fetch_array($results)){
+          echo " ". $id = $row ['id'];
+          echo " ". $firstName = $row ['firstName'];
+          echo " ". $secondName = $row ['secondName'];
+          echo "<a href='update.php?id=".$row['id']."'><button>Update</button></a>";
+          echo "<a href='delete.php?id=".$row['id']."'><button>Delete</button></a>";
+          echo "<hr>";
         }
     }
     else{
